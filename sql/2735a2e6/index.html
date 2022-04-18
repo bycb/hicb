@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mysql8.0.11安装配置 | 小巷陌影</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/myblog.ico">
+    <meta name="description" content="君子慎独，不欺暗室">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.07e65962.css" as="style"><link rel="preload" href="/assets/js/app.2222ea8a.js" as="script"><link rel="preload" href="/assets/js/3.1e9622d0.js" as="script"><link rel="preload" href="/assets/js/1.69ccdc90.js" as="script"><link rel="preload" href="/assets/js/28.740bbc46.js" as="script"><link rel="preload" href="/assets/js/10.edf6326a.js" as="script"><link rel="prefetch" href="/assets/js/11.2500efea.js"><link rel="prefetch" href="/assets/js/12.ea0b417b.js"><link rel="prefetch" href="/assets/js/13.a7e73c6f.js"><link rel="prefetch" href="/assets/js/14.66c04934.js"><link rel="prefetch" href="/assets/js/15.b33c9ec6.js"><link rel="prefetch" href="/assets/js/16.a6366ca4.js"><link rel="prefetch" href="/assets/js/17.12a94db1.js"><link rel="prefetch" href="/assets/js/18.31ba1e87.js"><link rel="prefetch" href="/assets/js/19.2ab321de.js"><link rel="prefetch" href="/assets/js/20.ec806c2e.js"><link rel="prefetch" href="/assets/js/21.16972c23.js"><link rel="prefetch" href="/assets/js/22.4be3c285.js"><link rel="prefetch" href="/assets/js/23.1e261cca.js"><link rel="prefetch" href="/assets/js/24.f15a31ae.js"><link rel="prefetch" href="/assets/js/25.c343ca3c.js"><link rel="prefetch" href="/assets/js/26.3d39d471.js"><link rel="prefetch" href="/assets/js/27.34220eaa.js"><link rel="prefetch" href="/assets/js/29.7727d78c.js"><link rel="prefetch" href="/assets/js/30.46dc4085.js"><link rel="prefetch" href="/assets/js/31.1738c4c6.js"><link rel="prefetch" href="/assets/js/32.ac429792.js"><link rel="prefetch" href="/assets/js/33.c4bfe2c9.js"><link rel="prefetch" href="/assets/js/34.cd8a5d34.js"><link rel="prefetch" href="/assets/js/35.489be53a.js"><link rel="prefetch" href="/assets/js/36.1a6eb946.js"><link rel="prefetch" href="/assets/js/37.3d9b9093.js"><link rel="prefetch" href="/assets/js/38.ca51289f.js"><link rel="prefetch" href="/assets/js/39.dae8fdda.js"><link rel="prefetch" href="/assets/js/4.916f5f08.js"><link rel="prefetch" href="/assets/js/40.cef387e8.js"><link rel="prefetch" href="/assets/js/41.04daabf2.js"><link rel="prefetch" href="/assets/js/42.9740acca.js"><link rel="prefetch" href="/assets/js/43.b879743f.js"><link rel="prefetch" href="/assets/js/5.34a12f13.js"><link rel="prefetch" href="/assets/js/6.c890a995.js"><link rel="prefetch" href="/assets/js/7.0f59ad73.js"><link rel="prefetch" href="/assets/js/8.c9f08907.js"><link rel="prefetch" href="/assets/js/9.382ad9a1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.07e65962.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>小巷陌影</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>君子慎独，不欺暗室</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>小巷陌影</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="小巷陌影" class="logo"> <span class="site-name">小巷陌影</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Kubernetes/" class="nav-link"><i class="undefined"></i>
+  Kubernetes
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  动态
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-message"></i>
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/logo.png" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    小巷陌影
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>31</h3> <h6 data-v-828910c6>文章</h6></div> <div data-v-828910c6><h3 data-v-828910c6>23</h3> <h6 data-v-828910c6>标签</h6></div></div> <ul class="social-links" data-v-828910c6><li class="social-item" data-v-828910c6><i class="iconfont reco-github" style="color:#fb9b5f;" data-v-828910c6></i></li><li class="social-item" data-v-828910c6><i class="iconfont reco-mayun" style="color:#f8b26a;" data-v-828910c6></i></li><li class="social-item" data-v-828910c6><i class="iconfont reco-csdn" style="color:#f8b26a;" data-v-828910c6></i></li></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Kubernetes/" class="nav-link"><i class="undefined"></i>
+  Kubernetes
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  动态
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-message"></i>
+  关于
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>mysql8.0.11安装配置</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>小巷陌影</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">mysql8.0.11安装配置</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>小巷陌影</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>2019/10/28</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>mysql</span></i></div></div> <div class="theme-reco-content content__default"><h3 id="下载"><a href="#下载" class="header-anchor">#</a> 下载</h3> <p>1、MySQL8.0 For Windows zip 包下载地址：https://dev.mysql.com/downloads/file/?id=476233，进入页面后可以不登录。后点击底部“No thanks, just start my download.”即可开始下载。</p> <p>2、百度网盘
+下载链接：https://pan.baidu.com/s/1noY_syZJMdMotE2dfQeorA
+提取码：kk8n
+复制这段内容后打开百度网盘手机 App，操作更方便哦</p> <h3 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h3> <h4 id="解压安装包"><a href="#解压安装包" class="header-anchor">#</a> 解压安装包</h4> <p>将压缩包解压到安装目录,目录如下：
+<img src="/images/sql/2020/1.jpg" alt="mixureSecure"></p> <h4 id="配置环境变量"><a href="#配置环境变量" class="header-anchor">#</a> 配置环境变量</h4> <p>将解压文件夹下的 bin 路径添加到变量值中，前后以 ; 开头结尾。</p> <h4 id="初始化-my-ini-文件"><a href="#初始化-my-ini-文件" class="header-anchor">#</a> 初始化 my.ini 文件</h4> <div class="language- extra-class"><pre class="language-text"><code>[mysqld]
+# 设置3306端口
+port=3306
+# 设置mysql的安装目录
+# 切记此处一定要用双斜杠\\，单斜杠我这里会出错，不过看别人的教程，有的是单斜杠。自己尝试吧
+basedir=D:\\mysql-8.0.11-winx64
+# 设置mysql数据库的数据的存放目录
+# 此处同上
+datadir=D:\\mysql-8.0.11-winx64\\Data
+# 允许最大连接数
+max_connections=200
+# 允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统
+max_connect_errors=10
+# 服务端使用的字符集默认为UTF8
+character-set-server=utf8
+# 创建新表时将使用的默认存储引擎
+default-storage-engine=INNODB
+# 默认使用“mysql_native_password”插件认证
+default_authentication_plugin=mysql_native_password
+[mysql]
+# 设置mysql客户端默认字符集
+default-character-set=utf8
+[client]
+# 设置mysql客户端连接服务端时默认使用的端口
+port=3306
+default-character-set=utf8
+</code></pre></div><h4 id="安装-2"><a href="#安装-2" class="header-anchor">#</a> 安装</h4> <p>以管理员身份运行 cmd 并且切换至 bin 目录下
+执行以下代码,执行完成后会打印初始密码：</p> <div class="language- extra-class"><pre class="language-text"><code>mysqld --initialize --console
+</code></pre></div><p>注意！执行输出结果里面有一段： [Note][my-010454] [Server] A temporary password is generated for root@localhost: rI5rvf5x5G,E 其中 root@localhost:后面的“rI5rvf5x5G,E”就是初始密码（不含首位空格）。在没有更改密码前，需要记住这个密码，后续登录需要用到。</p> <p>要是你手贱，关快了，或者没记住，那也没事，删掉初始化的 datadir 目录，再执行一遍初始化命令，又会重新生成的。当然，也可以使用安全工具，强制改密码，用什么方法，自己随意。</p> <p>参考：https://dev.mysql.com/doc/refman/8.0/en/data-directory-initialization-mysqld.html</p> <h4 id="服务"><a href="#服务" class="header-anchor">#</a> 服务</h4> <p>在 MySQL 安装目录的 bin 目录下执行命令：</p> <div class="language- extra-class"><pre class="language-text"><code>mysqld --install [服务名]
+</code></pre></div><p>后面的服务名可以不写，默认的名字为 mysql。当然，如果你的电脑上需要安装多个 MySQL 服务，就可以用不同的名字区分了，比如 mysql5 和 mysql8。</p> <p>安装完成之后，就可以通过命令 net start mysql 启动 MySQL 的服务了。通过命令 net stop mysql 停止服务。通过命令 sc delete MySQL/mysqld -remove 卸载 MySQL 服务</p> <h4 id="更改密码"><a href="#更改密码" class="header-anchor">#</a> 更改密码</h4> <p>在 MySQL 安装目录的 bin 目录下执行命令：</p> <div class="language- extra-class"><pre class="language-text"><code>mysql -u root -p
+</code></pre></div><p>这时候会提示输入密码，记住了上面第 3.1 步安装时的密码，填入即可登录成功，进入 MySQL 命令模式。
+在 MySQL 中执行命令：</p> <p>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '新密码';</p> <p>修改密码，注意命令尾的；一定要有，这是 mysql 的语法
+到此，安装部署就完成了</p> <div class="my-copyright" data-v-32d6fc0a><ul style="margin: auto;" data-v-32d6fc0a><li data-v-32d6fc0a>本文作者： 小巷陌影</li> <li data-v-32d6fc0a>本文链接： </li> <li data-v-32d6fc0a>
+			版权声明： 本博客所有文章除特别声明外，均采用 MIT
+			许可协议。转载请注明出处！
+		</li></ul></div></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-3" data-v-70334359><a href="/sql/2735a2e6/#下载" class="sidebar-link reco-side-下载" data-v-70334359>下载</a></li><li class="level-3" data-v-70334359><a href="/sql/2735a2e6/#安装" class="sidebar-link reco-side-安装" data-v-70334359>安装</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.2222ea8a.js" defer></script><script src="/assets/js/3.1e9622d0.js" defer></script><script src="/assets/js/1.69ccdc90.js" defer></script><script src="/assets/js/28.740bbc46.js" defer></script><script src="/assets/js/10.edf6326a.js" defer></script>
+  </body>
+</html>
