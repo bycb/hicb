@@ -1,7 +1,8 @@
 ---
 title: 关于
 date: 2019-05-29
-publish: false
+hidden: true
+recommend: 1
 ---
 
 # 关于
