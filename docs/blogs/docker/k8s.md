@@ -157,9 +157,10 @@ kubeadm init \
 
 #### 问题及解决方案：
 
-::: info 问题
+```
 The HTTP call equal to 'curl -sSL http://localhost:10248/healthz' failed with error: Get "http://localhost:10248/healthz": dial tcp [::1]:10248: connect: connection refused.
-:::
+```
+
 原因是之前我的 Docker 是用 yum 安装的，docker 的 cgroup 驱动程序默认设置为 systemd。默认情况下 Kubernetes cgroup 为 system，我们需要更改 Docker cgroup 驱动
 
 解决方法：
