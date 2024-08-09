@@ -11,6 +11,6 @@ date: 2020-11-12 10:37:35
 
 # 测试自动部署
 
-测试 github Actions 自动部署博客并同步至 gitee
+测试 github Actions 自动部署博客
 
 效果不错
